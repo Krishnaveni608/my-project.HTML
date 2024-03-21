@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+ <html lang="en">
+   <head>
+       <meta charset="UTF-8" />
+       <meta http-equiv="X-UA-Compatible" content=""IE=edge />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+       crossorigin="anonymous" 
+       />
+      
+       <link rel="stylesheet" href="style.css" />
+   
+       <title>Resume Generator</title>
+ </head>
+ <body>
+  <!-- here goes html code -->
+
+   <div class="container" id="cv-form">
+   
+    <h1 class="text-center my-2">Resume Generator</h1>
+    <p class="text-center">By Krishnaveni</p>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <!-- first col -->
+    
+        <h3>Personal Information</h3>
+    
+    <div class="form-group mt-2">
+          <label for="nameField">Your Name</label>
+          <input 
+           type="text" 
+           id="nameField" 
+           Placeholder="Enter here" 
+           class="form-control"
+          />
+    </div>
+   
+    <div class="form-group mt-2">
+        <label for="ContactField">Your Contact Numbers</label>
+        <input type="text"
+         id="ContactField" 
+         Placeholder="Enter here" 
+         class="form-control" 
+         />
+    </div>
+   
+    <div class="form-group mt-2">
+        <label for="AddressField">Your Address</label>
+        <textarea
+        id="AddressField" 
+        Place holder="Enter here" 
+        class="form-control"
+        rows="5"
+        ></textarea>
+    </div>
+    <p class="secondary-text my-3">Important Links</p>
+    <div class="form-group mt-2">
+        <label for="fbField">Facebook </label>
+        <input type="text"
+         id="fbField" 
+         Placeholder="Enter here"
+          class="form-control"
+         />
+    </div>
+    
+    <div class="form-group mt-2">
+        <label for="InstaField">Instagram</label>
+        <input type="text" 
+        id="instaField" 
+        Placeholder="Enter here" 
+        class="form-control" 
+        />
+    </div>
+    
+    <div class="form-group mt-2">
+        <label for="linkedField">LinkedIn</label>
+        <input type="text" 
+        id="linkedField" 
+        Placeholder="Enter here" 
+        class="form-control" 
+        />
+     </div>
+    </div>
+   
+    <div class="col-md-6">
+        <!-- second col -->
+        <h3>Professional Information</h3>
+        
+        <div class="form-group mt-2">
+            <label for="">Objective</label>
+            <textarea
+            id="objectiveField"
+            rows="5"
+            Placeholder="Enter here" 
+            class="form-control" 
+            ></textarea>
+    </div>
+        
+    <div class="form-group mt-2" id="we">
+            <label for="">Work Experience</label>
+            <textarea
+            Placeholder="Enter here" 
+            class="form-control weField"
+            rows="3"
+            ></textarea>
+           
+            <!-- new textarea -->
+           
+            <div class="container text-center mt-2" id="weAddButton">
+            <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+     </div>
+    </div>
+       
+     <div class="form-group mt-2" id="aq">
+            <label for="">Academic Qualification</label>
+            <textarea
+            Placeholder="Enter here" 
+            class="form-control eqField"
+            rows="3"
+            ></textarea>
+           
+            <!-- new textarea -->
+            <div class="container text-center mt-2" id="aqAddButton">
+            <button onclick="addNewAQField()" class="btn btn-primary btn-sm">
+                Add
+            </button>
+            </div>
+           </div>
+          </div>
+         </div>
+            
+         <div class="container text-center mt-3">
+           <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+            </div>
+         </div>
+          
+         <!--cv template-->
+          
+         <div class="container" id="cv-template">
+           <div class="row">
+             <div class="col-md-4 text-center py-5 background">
+                <!--first col-->
+
+                <img 
+                  src="c:\Users\KRISHNAVENI\Downloads\img.jpg"   
+                   alt="" 
+                   class="img-fluid myimg" 
+                />
+            <div class="container">
+               <p id="nameT1">Krishnaveni Barri</p>
+               <p id="contactT">+916871237763, +919334478138</p>
+               <p id="AddressT">532312/987273 , visakhapatnam , INDIA</p>
+               
+               <hr />
+
+               <p>
+                <a id="fbT" href="#1">http://www.facebook.com/Krishnaveni</a>
+            </p>
+            <p>
+                <a id="instaT" href="#1">https://www.instagram.com/krishnaveni_reddy08/?utm_source=qr&r=nametag</a>
+            </p>
+            <p>
+                <a id="linkedT" href="#1">https://www.linkedin.com/in/krishnaveni-barri-20063b24a?utm_source=share&utm_campaign=share_via&utm_
+                    content=profile&utm_medium=android_app</a>
+            </p>
+             
+            </div>
+           </div>
+            <div class="col-md-8 py-5">
+                <!--second col-->
+                <h1 id="nameT2" class="text-center" style="font-weight:980;">
+                    KRISHNAVENI BARRI
+                </h1>
+
+                <!--objective card-->
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                    <p id="objectiveT">
+                        Contrary to popular belief, a resume objective (also known as a career objective)
+                         is not a generic description about how much you want the job, or how the position 
+                         you are applying for will further you personally or professionally.
+                        </p>
+                     </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                    <ul id="weT">
+                        <li>
+                        I am currently studying B-tech final year.
+                    </li>
+                       <li>
+                        I am a fresher candidate So, I have no work Experience.
+                     </li>
+                  </ul>
+               </div>
+            </div>
+
+                <!--academic qualification-->
+                
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                    <ul id="aqT">
+                        <li>
+                          B-Tech (C.S.C) Raghu Institute Of Technology(Autonomous)-Dakamari	2020-2024(still pursuing)	7.92 CGPA(till date)
+                        </li>
+                        <li>
+                          Intermediate Aditya Junior College- Ichapuram	2018-2020	8.04 CGPA
+                        </li>
+                       <li>
+                          SSC Santinikethan (EM) School - Ichapuram	2017	8.7 CGPA
+                      </li> 
+                        </ul>
+                     </div>
+                     <div class="container mt-3 text-center">
+                        <button onclick="printCV()" class="btn background">Print CV</button>
+                     </div>
+                </div>
+            </div>
+         </div>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <script src="script.js"></script>  
+</body>
+</html>
